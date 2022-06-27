@@ -25,7 +25,7 @@ class MainController < Sinatra::Base
 
     path = request.env['HTTP_X_FORWARDED_URI'] || ''
     parsed_path = CGI.parse(URI(path).query || '')
-    token = parsed_path.key?('apikey') ? parsed_path['apikey'].first : request.env['HTTP_AUTHORIZATION']&.gsub(/^Bearer /, '') || 'unknown'
+    token = parsed_path.key?('apikey') ? parsed_path['apikey'].first : request.env['HTTP_AUTHORIZATION']&.gsub(/^bearer /i, '') || 'unknown'
 
     data = {
       input: {
