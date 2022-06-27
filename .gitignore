@@ -1,0 +1,11 @@
+config/config.yml
+cache/*
+config/cache/*
+.idea
+config.tgz
+build/gems
+*.tgz
+*.ndjson
+*.lock
+**/*/config
+data/*
