@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-$LOAD_PATH << '.'
-Dir.chdir('..')
+$LOAD_PATH << '.' << '/Users/mehmetc/Dropbox/AllSources/Archiefpunt/services/policy-agent'
+#Dir.chdir('..')
 
 require 'json'
 require 'jwt'
