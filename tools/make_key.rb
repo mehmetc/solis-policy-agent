@@ -19,8 +19,8 @@ end
 
 
 
-exit 1 if ARGV.length != 2
-token = encode({"user": ARGV[0], "role": ARGV[1].split(',')})
+exit 1 if ARGV.length != 3
+token = encode({"user": ARGV[0], "institution": ARGV[1], "role": ARGV[2].split(',')})
 puts token
 
 puts decode(token)
