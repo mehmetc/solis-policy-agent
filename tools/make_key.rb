@@ -6,14 +6,15 @@ require 'json'
 require 'jwt'
 require 'lib/config_file'
 
+JWT_SECRET=ConfigFile[:secret_prod]
 
 def encode(payload)
-  secret = ConfigFile[:secret]
+  secret = JWT_SECRET
   JWT.encode payload, secret, 'HS512'
 end
 
 def decode(payload)
-  secret = ConfigFile[:secret]
+  secret = JWT_SECRET
   JWT.decode(payload, secret, true, {algorithm: 'HS512'}).first
 end
 
