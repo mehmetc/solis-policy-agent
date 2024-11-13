@@ -6,8 +6,8 @@ require 'json'
 require 'jwt'
 require 'lib/config_file'
 
-JWT_SECRET=ConfigFile[:secret_prod]
-#JWT_SECRET=ConfigFile[:secret]
+#JWT_SECRET=ConfigFile[:secret_prod]
+JWT_SECRET=ConfigFile[:secret]
 
 def encode(payload)
   secret = JWT_SECRET
